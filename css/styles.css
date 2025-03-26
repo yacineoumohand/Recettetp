@@ -1,87 +1,300 @@
+/* Appliquer le modèle de boîte à tous les éléments */
+* {
+  box-sizing: border-box;
+}
+
+/* Définition des variables de couleurs */
 :root {
-    --primary-color: #e67f22;
-    --secondary-color: #47c575;
-    --troisieme-color: #5fa0c2;
-    --white-color: #ffffff;
-    --gray-color: #f7f4ed;
-    --orange-color: #f8d350;
+  --primary-color: #e67f22;
+  --secondary-color: #47c575;
+  --troisieme-color: #5fa0c2;
+  --white-color: #ffffff;
+  --gray-color: #f7f4ed;
+  --orange-color: #f8d350;
+  --lightgrey-color: #f9f9f9;
+  --blue-color: #70b2dd;
 }
 
+/* Suppression des marges et des paddings par défaut du body */
+body {
+  margin: 0;
+  padding: 0;
+}
+
+/* Styles de l'en-tête */
 header > div {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 10px 20px;
-    border-bottom: 2px solid #fff;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-    background-color: #fff;
-    gap: 3px;
-  }
-    
-  .nav {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-    button{
-        transform: scaleX(-1);
-        background-color: var(--gray-color);
-        color: var(--orange-color);
-        padding: 10px;
-        width: 50px;
-        height: 50px;
-        border-radius: 50%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 24px;
-        text-decoration: none;
-    
-    }
-  }
-  
-  .menu ul {
-    display: none;
-    gap: 10px;
-  }
-  
-  a.g, a.logo {
-    font-size: 2.5rem;
-    font-weight: bold;
-  }
-  .g {
-    background-color: #e67f22;
-    color: var(--white-color);
-    padding: 10px;
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 24px;
-    text-decoration: none;
-  }
-  .logo{
-    color: var(--primary-color);
-  }
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  border-bottom: 2px solid #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  background-color: #fff;
+  max-width: 1200px;
+  margin: 0 auto;
+}
 
+/* Style de la navigation */
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
 
-.recherche{
-  display: grid;
-  margin: 30px;
+/* Bouton de navigation */
+.nav button {
+  transform: scaleX(-1);
+  background-color: var(--gray-color);
+  color: var(--orange-color);
+  padding: 10px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  text-decoration: none;
+}
+
+/* Masquer la liste du menu par défaut */
+.menu ul {
+  display: none;
   gap: 10px;
-  button{
-    background-color: var(--primary-color);
-    border-radius: 2px;
-    color: var(--white-color);
-    font-size: 1.2rem;
+}
+
+/* Style des liens de la barre de navigation */
+a.g, a.logo {
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+/* Style du logo arrondi */
+.g {
+  background-color: #e67f22;
+  color: var(--white-color);
+  padding: 10px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  text-decoration: none;
+}
+
+/* Couleur du texte du logo */
+.logo {
+  color: var(--primary-color);
+}
+
+/* Conteneur de la barre de recherche */
+.recherche {
+  display: grid;
+  gap: 10px;
+  max-width: 1200px;
+  margin: 30px auto;
+  padding: 0 20px;
+}
+
+/* Style du bouton de recherche */
+.recherche button {
+  background-color: var(--primary-color);
+  border-radius: 2px;
+  color: var(--white-color);
+  font-size: 1.2rem;
+}
+
+/* Style des champs de recherche */
+.recherche input {
+  padding: 15px;
+}
+
+/* Style des filtres (catégorie, temps, difficulté) */
+.categorie,
+.temps,
+.dificulte {
+  display: grid;
+  gap: 10px;
+  border: 1px solid var(--lightgrey-color);
+  background-color: var(--lightgrey-color);
+  max-width: 1200px;
+  margin: 30px auto;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+/* Style des figures contenant les images */
+figure {
+  position: relative;
+  max-width: 1200px;
+  margin: 30px auto;
+  background-color: #fff;
+}
+
+/* Style des images dans les figures */
+figure img {
+  width: 100%;
+  display: block;
+}
+
+/* Icône en haut à droite des images */
+figure svg {
+  color: var(--white-color);
+  position: absolute;
+  top: 3%;
+  right: 5%;
+}
+
+/* Style du texte sous les images */
+figcaption {
+  padding: 20px;
+  text-align: center;
+}
+
+/* Style du bouton sous chaque recette */
+figcaption button {
+  border: 1px solid var(--primary-color);
+  background-color: var(--primary-color);
+  color: var(--white-color);
+  padding: 10px;
+  border-radius: 7px;
+  width: 100%;
+  max-width: 400px;
+}
+
+/* Style des titres des recettes */
+figcaption h2 {
+  margin-bottom: 20px;
+  font-size: 1.5rem;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+/* Style des informations sous le titre */
+figcaption .info {
+  margin-bottom: 20px;
+  display: flex;
+  gap: 20px;
+  border-radius: 3px;
+  flex-wrap: wrap;
+}
+
+/* Style des blocs d'information */
+figcaption .info p {
+  color: var(--white-color);
+  padding-inline: 20px;
+  border-radius: 15px;
+  margin-left: 3px;
+}
+
+/* Couleur des différents blocs d'information */
+figcaption .info p:nth-child(1) {
+  background-color: var(--primary-color);
+}
+
+figcaption .info p:nth-child(2) {
+  background-color: var(--secondary-color);
+}
+
+figcaption .info p:nth-child(3) {
+  background-color: var(--blue-color);
+}
+
+/* Masquer certains éléments du footer */
+footer .footer1, .footer2 {
+  display: none;
+}
+
+/* Style du texte de copyright */
+footer .copyright {
+  text-align: center;
+  margin-bottom: 20px;
+  background-color: #e67f22;
+  color: var(--white-color);
+  padding: 20px;
+}
+
+/* Version tablette */
+@media (min-width: 768px) and (max-width: 1024px) {
+  header {
+    position: relative;
   }
-  input{
-    padding: 15px;
+
+  /* Position du logo */
+  div .logo {
+    position: absolute;
+    left: 80px;
+  }
+
+  /* Réorganisation de la barre de recherche */
+  #one .recherche, button {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+  }
+
+  /* Réorganisation des sections */
+  #two {
+    display: grid;
+    grid-template-columns: 3fr 3fr;
+    gap: 20px;
+  }
+
+  /* Centrage du texte du footer */
+  footer p {
+    text-align: center;
+    margin-bottom: 20px;
+    background-color: var(--primary-color);
+    padding: 20px;
+    color: var(--white-color);
   }
 }
 
+/* Version desktop */
+@media (min-width: 1024px) {
+  /* Masquer le menu burger */
+  .burger {
+    display: none;
+  }
 
+  /* Positionnement du menu */
+  .menu ul {
+    display: flex;
+    gap: 40px;
+    position: absolute;
+    left: 400px;
+    top: 25px;
+  }
 
-    
+  /* Réorganisation des sections */
+  #one {
+    display: grid;
+    grid-template-columns: 3fr 3fr 3fr 3fr;
+  }
 
+  #two {
+    display: grid;
+    grid-template-columns: 4fr 4fr 4fr;
+  }
+
+  /* Affichage du footer complet */
+  footer .footer1 {
+    display: block;
+    margin-left: 20px;
+  }
+
+  footer {
+    display: flex;
+    justify-content: space-between;
+    gap: 500px;
+    border-top: 1px solid gainsboro;
+    border-bottom: 1px solid gainsboro;
+    padding: 20px;
+    margin-bottom: 20px;
+  }
+
+  /* Masquer le texte de copyright sur desktop */
+  .copyright {
+    display: none;
+  }
+}

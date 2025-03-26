@@ -5,23 +5,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>recette</title>
+    <link rel="stylesheet" href="css/normelize.css">
+    <link rel="stylesheet" href="css/recette.css">
 </head>
 
 <body>
     <header>
-        <header>
             <nav>
                 <div class="nav">
                     <a class="g" href="">G</a>
                     <a class="logo" href="logo">GourmeTech</a>
                     <button>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor"
                             class="bi bi-moon-fill" viewBox="0 0 16 16">
                             <path
                                 d="M6 .278a.77.77 0 0 1 .08.858 7.2 7.2 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277q.792-.001 1.533-.16a.79.79 0 0 1 .81.316.73.73 0 0 1-.031.893A8.35 8.35 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.75.75 0 0 1 6 .278" />
                         </svg>
                     </button>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                    <svg  class="burger" xmlns="http://www.w3.org/2000/svg" width="60" height="60" fill="currentColor"
                         class="bi bi-list" viewBox="0 0 16 16">
                         <path fill-rule="evenodd"
                             d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5" />
@@ -35,56 +36,57 @@
                         </ul>
                     </div>
             </nav>
-        </header>
     </header>
     <main>
         <section>
             <h1>La recette du tajin</h1>
             <figure>
-                <img src="assets/images/tajin_resized.jpg" alt="">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                <img src="assets/images/tajin_resized.jpg" alt="tajin poulet">
+                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
                     class="bi bi-heart-fill" viewBox="0 0 16 16">
                     <path fill-rule="evenodd"
                         d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314" />
                 </svg>
                 <figcaption>
                     <h2>tajin</h2>
-                    <p>plat</p>
-                    <p>60min</p>
-                    <p>moyen</p>
+                    <div class="info">
+                        <p>plat</p>
+                        <p>60min</p>
+                        <p>moyen</p>
+                    </div>
                 </figcaption>
             </figure>
-            <h2>ingrédiants</h2>
-            <h3>Étape 1</h3>
+            <h3>ingrédiants</h3>
+            <h4>Étape 1</h4>
             <p>
                 Verser 3/4 de cuillère à soupe d'huile dans le plat à tajine directement posé sur le feu ou la
                 plaque.
             </p>
-            <h3>Étape 2</h3>
+            <h4>Étape 2</h4>
             <p>
                 Lorsque l'huile est bien chaude, faire revenir la viande de chaque côté (environ 10 min).
             </p>
-            <h3>Étape 3</h3>
+            <h4>Étape 3</h4>
             <p>
                 Baisser un peu le feu et placer les légumes, lavés et découpés grossièrement, en pyramide sur la
                 viande, des plus fermes aux plus tendres (pommes de terre, puis carotte, puis courgettes, puis
                 oignons), en les intercalant de cumin, 14 épices, sel et poivre.
             </p>
-            <h3>Étape 4</h3>
+            <h4>Étape 4</h4>
             <p>
                 Arroser d'un peu d'eau, saupoudrer de safran jaune, pour donner de la couleur et déposer les olives
                 vertes.
             </p>
-            <h3>Étape 5</h3>
+            <h4>Étape 5</h4>
             <p>
                 Couvrir et laisser cuire à feu doux, pendant 30 mn.
             </p>
-            <h3>Etape 6</h3>
+            <h4>Etape 6</h4>
             <p>
                 Au bout de ce temps, placer sur les légumes cuits, les tomates coupées en morceaux, couvrir et
                 laisser cuire encore 15mn.
             </p>
-            <h3>Étape 7</h3>
+            <h4>Étape 7</h4>
             <p>
                 Servir chaud, directement sur la table, accompagné de thé et de pain sans levain.
             </p>
@@ -93,38 +95,58 @@
             <h1>recettes similaires</h1>
             <figure>
                 <img src="assets/images/couscous_resized.jpg" alt="">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
                     class="bi bi-heart-fill" viewBox="0 0 16 16">
                     <path fill-rule="evenodd"
                         d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314" />
                 </svg>
                 <figcaption>
                     <h2>couscous</h2>
-                    <p>plat</p>
-                    <p>60min</p>
-                    <p>moyen</p>
+                    <div class="info">
+                        <p>plat</p>
+                        <p>60min</p>
+                        <p>moyen</p>
+                    </div>
                 </figcaption>
             </figure>
-            <h3>Étape 1</h3>
+            <h3>ingrédiants</h3>
+            <h4>Étape 1</h4>
             <p>Faire revenir le poulet à feu moyen pour qu'il soit un peu doré.</p>
-            <h3>Étape 2</h3>
+            <h4>Étape 2</h4>
             <p>
                 Pendant ce temps, peler et couper les légumes : couper les carottes en 2 , puis dans le sens de la
                 longueur. Idem pour les courgettes. Couper les oignons en lamelles et les pommes de terres en 4.
             </p>
-            <h3>Étape 3</h3>
+            <h4>Étape 3</h4>
             <p>
                 Mettre les légumes avec le poulet, rajouter les épices à tajine et le cumin. Mettez également un peu
                 d'eau (3/4 verre d'eau).
             </p>
-            <h3>Étape 4</h3>
+            <h4>Étape 4</h4>
             <p>
                 Laisser cuire environ 1 heure et voilà, c'est prêt !
             </p>
-
         </section>
     </main>
-    <footer></footer>
+    <footer>
+        <section class="footer1">
+            <h1>Navigation</h1>
+            <nav>
+              <ul>
+                <li>Accueil</li>
+                <li>Ajouter une recette</li>
+                <li>Mes favoris</li>
+                <li>A propos</li>
+              </ul>
+            </nav>
+          </section>
+          <section class="footer2">
+            <h1>A propos de gourmeTech</h1>
+            <p>GourmeTech est une plateforme de recettes culinaires interactive développée dans le cadre d'un projet
+              pédagigique.</p>
+          </section>
+          <p>2025<a href="">GourmeTech</a>-Tous droit réservés</p>      
+    </footer>
 </body>
 
 </html>

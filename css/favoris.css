@@ -1,0 +1,272 @@
+/* Applique la boîte de dimensionnement border-box à tous les éléments pour simplifier la gestion des tailles */
+* {
+    box-sizing: border-box;
+  }
+  
+  /* Déclaration des variables CSS pour faciliter la réutilisation des couleurs */
+  :root {
+    --primary-color: #e67f22;      /* Orange principal */
+    --secondary-color: #47c575;    /* Vert */
+    --troisieme-color: #5fa0c2;    /* Bleu clair */
+    --white-color: #ffffff;        /* Blanc */
+    --gray-color: #f7f4ed;         /* Gris clair */
+    --orange-color: #f8d350;       /* Jaune orangé */
+    --lightgrey-color: #f9f9f9;    /* Gris très clair */
+    --blue-color: #70b2dd;         /* Bleu */
+  }
+  
+  /* Réinitialisation des marges et paddings par défaut sur le body */
+  body {
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Style du conteneur principal dans le header */
+  header > div {
+    display: flex;
+    align-items: center;            /* Aligne les éléments verticalement */
+    justify-content: space-between; /* Espace entre les éléments */
+    padding: 10px 20px;
+    border-bottom: 2px solid #fff;  /* Ligne blanche en bas */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Ombre légère */
+    background-color: #fff;
+    max-width: 1200px;              /* Centré avec une largeur max */
+    margin: 0 auto;
+  }
+  
+  /* Barre de navigation */
+  .nav {
+    margin-inline: 5px;
+    display: flex;
+    align-items: center;
+    gap: 10px;                      /* Espace entre les éléments de la nav */
+  }
+  
+  /* Style du bouton (icône transformée horizontalement) */
+  .nav button {
+    transform: scaleX(-1);          /* Miroir horizontal */
+    background-color: var(--gray-color);
+    color: var(--orange-color);
+    padding: 10px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;             /* Bouton rond */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    text-decoration: none;
+  }
+  
+  /* Menu de navigation masqué par défaut */
+  .menu ul {
+    display: none;
+    gap: 10px;
+  }
+  
+  /* Style des liens du logo principal */
+  a.g, a.logo {
+    font-size: 2.5rem;
+    font-weight: bold;
+  }
+  
+  /* "G" dans un cercle orange */
+  .g {
+    background-color: #e67f22;
+    color: var(--white-color);
+    padding: 10px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;             /* Cercle parfait */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    text-decoration: none;
+  }
+  
+  /* Texte "GourmeTech" en orange */
+  .logo {
+    color: var(--primary-color);
+  }
+
+  
+
+
+
+  /* Style du titre principal */
+h1 {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  /* Conteneur de l'image et du texte descriptif */
+  figure {
+    position: relative;
+    max-width: 1200px;
+    margin: 30px auto;
+    background-color: #fff;
+  }
+  
+  /* Style de l'image */
+  figure img {
+    width: 100%;                    /* Prend toute la largeur */
+    display: block;                 /* Évite les espaces sous l'image */
+  }
+  
+  /* Icône (ex: cœur) positionnée au-dessus de l'image */
+  figure .coeur{
+    color: var(--white-color);
+    position: absolute;
+    top: 3%;
+    right: 10%;
+  }
+    /* Icône (ex: poubelle) positionnée a coté du coeur */
+  figure .poubelle{
+    color: var(--white-color);
+    position: absolute;
+    top: 3%;
+    right: 2%;
+  }  
+  /* Titre du plat ou de la figure */
+  figcaption h2 {
+    margin-left: 20px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  }
+  
+  /* Bloc contenant les infos sur le plat (catégorie, temps, difficulté) */
+  figcaption .info {
+    margin-left: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    gap: 20px;
+    border-radius: 3px;
+    flex-wrap: wrap;                /* Passe à la ligne si nécessaire */
+  }
+  
+  /* Style général des paragraphes d'infos */
+  figcaption .info p {
+    color: var(--white-color);
+    padding-inline: 20px;
+    border-radius: 15px;
+    margin-left: 3px;
+  }
+  
+  /* Chaque info a sa propre couleur de fond */
+  figcaption .info p:nth-child(1) {
+    background-color: var(--primary-color); /* Catégorie */
+  }
+  figcaption .info p:nth-child(2) {
+    background-color: var(--secondary-color); /* Temps */
+  }
+  figcaption .info p:nth-child(3) {
+    background-color: var(--blue-color); /* Difficulté */
+  }
+  
+  /* Sous-titres (ex : Ingrédients, Préparation) */
+  h3 {
+    color: var(--primary-color);
+    font-size: 1.8rem;
+    margin-top: 30px;
+    margin-bottom: 15px;
+    font-family: 'Arial', sans-serif;
+    border-left: 5px solid var(--secondary-color); /* Barre verte à gauche */
+    padding-left: 15px;
+  }
+  
+  /* Paragraphe descriptif (texte des recettes ou autres) */
+  p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #333;
+    background-color: var(--lightgrey-color);
+    padding: 15px;
+    margin-bottom: 15px;
+    font-family: 'Verdana', sans-serif;
+  }
+  
+  /* Style par défaut du footer : certaines parties sont masquées */
+  footer .footer1, .footer2 {
+    display: none;
+  }
+  
+  /* Style du paragraphe du footer */
+  footer p {
+    text-align: center;
+    margin-bottom: 20px;
+    background-color: var(--primary-color);
+    color: var(--white-color);
+  }
+
+
+
+  @media (min-width: 768px) and (max-width: 1024px) {
+  
+    /* Applique le box-sizing border-box à tous les éléments pour mieux gérer les tailles */
+    * {
+      box-sizing: border-box;
+    }
+  
+    /* Réinitialise les marges et paddings du body */
+    body {
+      margin: 0;
+      padding: 0;
+    }
+  
+    /* Positionne le header en relatif pour permettre un positionnement absolu des éléments enfants */
+    header {
+      position: relative;
+    }
+  
+    /* Positionne le bouton de menu (hamburger) à droite avec un léger décalage */
+    div button {
+      position: absolute;
+      right: 70px;
+    }
+  
+    /* Positionne le menu burger à droite de l’écran */
+    .burger {
+      position: absolute;
+      right: 10px;
+    }
+  
+    /* Ajuste la navigation */
+    .nav {
+      margin-inline: 5px; /* Espacement horizontal */
+      display: flex; /* Affichage en ligne */
+      align-items: center; /* Alignement vertical des éléments */
+      gap: 10px; /* Espacement entre les éléments */
+    }
+  }
+  
+
+/* version desk */
+@media (min-width: 1024px) {
+
+  /* Masque le bouton du menu burger sur les écrans larges */
+  .burger {
+    display: none;
+  }
+
+  /* Affiche le menu de navigation et ajoute un espacement entre les éléments */
+  .menu ul {
+    display: flex;
+    gap: 50px; /* Espacement entre les liens du menu */
+    margin-left: 50px; /* Décalage à gauche */
+  }
+
+  /* Positionne le header en relatif pour que les éléments puissent être positionnés en absolu */
+  header {
+    position: relative;
+  }
+
+  /* Positionne les boutons de navigation à droite */
+  button {
+    position: absolute;
+    right: 20px;
+  }
+}

@@ -1,0 +1,312 @@
+/* Applique la boîte de dimensionnement border-box à tous les éléments pour simplifier la gestion des tailles */
+* {
+    box-sizing: border-box;
+  }
+  
+  /* Déclaration des variables CSS pour faciliter la réutilisation des couleurs */
+  :root {
+    --primary-color: #e67f22;      /* Orange principal */
+    --secondary-color: #47c575;    /* Vert */
+    --troisieme-color: #5fa0c2;    /* Bleu clair */
+    --white-color: #ffffff;        /* Blanc */
+    --gray-color: #f7f4ed;         /* Gris clair */
+    --orange-color: #f8d350;       /* Jaune orangé */
+    --lightgrey-color: #f9f9f9;    /* Gris très clair */
+    --blue-color: #70b2dd;         /* Bleu */
+  }
+  
+  /* Réinitialisation des marges et paddings par défaut sur le body */
+  body {
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Style du conteneur principal dans le header */
+  header > div {
+    display: flex;
+    align-items: center;            /* Aligne les éléments verticalement */
+    justify-content: space-between; /* Espace entre les éléments */
+    padding: 10px 20px;
+    border-bottom: 2px solid #fff;  /* Ligne blanche en bas */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Ombre légère */
+    background-color: #fff;
+    max-width: 1200px;              /* Centré avec une largeur max */
+    margin: 0 auto;
+  }
+  
+  /* Barre de navigation */
+  .nav {
+    margin-inline: 5px;
+    display: flex;
+    align-items: center;
+    gap: 10px;                      /* Espace entre les éléments de la nav */
+  }
+  
+  /* Style du bouton (icône transformée horizontalement) */
+  .nav button {
+    transform: scaleX(-1);          /* Miroir horizontal */
+    background-color: var(--gray-color);
+    color: var(--orange-color);
+    padding: 10px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;             /* Bouton rond */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    text-decoration: none;
+  }
+  
+  /* Menu de navigation masqué par défaut */
+  .menu ul {
+    display: none;
+    gap: 10px;
+  }
+  
+  /* Style des liens du logo principal */
+  a.g, a.logo {
+    font-size: 2.5rem;
+    font-weight: bold;
+  }
+  
+  /* "G" dans un cercle orange */
+  .g {
+    background-color: #e67f22;
+    color: var(--white-color);
+    padding: 10px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;             /* Cercle parfait */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    text-decoration: none;
+  }
+  
+  /* Texte "GourmeTech" en orange */
+  .logo {
+    color: var(--primary-color);
+  }
+
+  /* Main content section for mobile */
+main {
+    padding: 20px 10px;
+    background-color: var(--lightgrey-color);
+    max-width: 100%;  /* Utilisation de la largeur complète sur mobile */
+    margin: 0 auto;
+}
+
+/* Titre principal */
+main h1 {
+    font-family: 'Impact', Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 2.2rem; /* Taille ajustée pour les petits écrans */
+    color: var(--primary-color);
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+/* Description du site */
+main p {
+    font-size: 1rem; /* Réduction de la taille du texte */
+    color: black;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+/* Sections de contenu (contact, FAQ) */
+section {
+    margin-bottom: 30px;
+}
+
+/* Sous-titres des sections */
+section h2 {
+    font-size: 1.5rem; /* Taille ajustée pour mobile */
+    color: var(--primary-color);
+    font-family: 'Arial', sans-serif;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+/* Formulaire de contact */
+form {
+    background-color: var(--white-color);
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+/* Espacement entre les champs du formulaire */
+form div {
+    margin-bottom: 15px;
+}
+
+/* Style des labels du formulaire */
+form label {
+    font-size: 1rem;
+    color: black;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+}
+
+/* Style des champs du formulaire */
+form input,
+form textarea {
+    width: 100%; /* Remplir toute la largeur disponible */
+    padding: 10px;
+    border: 1px solid var(--gray-color);
+    border-radius: 5px;
+    font-size: 1rem;
+    color: #333;
+    box-sizing: border-box;
+}
+
+/* Style du bouton d'envoi */
+form button {
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%; /* Bouton de largeur pleine */
+}
+
+form button:hover {
+    background-color: var(--orange-color);
+}
+
+/* FAQ - Détails */
+details {
+    background-color: var(--white-color);
+    padding: 12px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Style du titre de la FAQ */
+details summary {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+/* Style des réponses de la FAQ */
+details p {
+    font-size: 1rem;
+    color: black;
+    margin-top: 10px;
+    padding-left: 20px;
+}
+
+/* Style du footer */
+footer {
+    background-color: var(--primary-color); /* Couleur de fond orange */
+    color: var(--white-color);              /* Couleur du texte blanche */
+    padding: 20px;
+    text-align: center;                     /* Centrer le texte */
+}
+
+/* Masquer toutes les sections sauf la balise p */
+footer .footer1,
+footer .footer2 {
+    display: none;
+}
+
+/* Style pour la balise p contenant l'ancre */
+footer p {
+    font-size: 1rem;
+    margin: 10px 0;
+}
+
+/* Style pour l'ancre */
+footer p a {
+    color: var(--white-color);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+footer p a:hover {
+    text-decoration: underline;
+}
+
+
+
+/* version tablette */
+
+@media (min-width: 768px) and (max-width: 1024px) {
+
+  /* Applique la propriété box-sizing à tous les éléments pour inclure les bordures et paddings dans la taille totale */
+  * {
+    box-sizing: border-box;
+  }
+
+  /* Supprime les marges et les paddings par défaut du body pour un affichage cohérent */
+  body {
+    margin: 0;
+    padding: 0;
+  }
+
+  /* Définit le header en position relative pour permettre le positionnement absolu des éléments enfants */
+  header {
+    position: relative;
+  }
+
+  /* Positionne un bouton à 70px du bord droit */
+  div button {
+    position: absolute;
+    right: 70px;
+  }
+
+  /* Place le menu burger à 10px du bord droit de l’écran */
+  .burger {
+    position: absolute;
+    right: 10px;
+  }
+
+  /* Ajuste la navigation */
+  .nav {
+    margin-inline: 5px; /* Ajoute un espacement horizontal */
+    display: flex; /* Affichage en ligne */
+    align-items: center; /* Alignement vertical */
+    gap: 10px; /* Espacement entre les éléments */
+  }
+}
+
+
+/* version desktop */
+
+@media (min-width: 1024px) {
+
+  /* Cache le bouton du menu burger sur les grands écrans */
+  .burger {
+    display: none;
+  }
+
+  /* Affiche la liste du menu en ligne avec un espacement entre les éléments */
+  .menu ul {
+    display: flex;
+    gap: 50px; /* Espacement entre les liens */
+    margin-left: 50px; /* Décalage à gauche */
+  }
+
+  /* Définit le header en position relative pour le positionnement des éléments internes */
+  header {
+    position: relative;
+  }
+
+  /* Positionne un bouton à 20px du bord droit */
+  button {
+    position: absolute;
+    right: 20px;
+  }
+}
+
+
