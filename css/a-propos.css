@@ -238,6 +238,40 @@ footer p a:hover {
 }
 
 
+details {
+  margin-bottom: 10px;
+}
+
+summary {
+  cursor: pointer;
+  font-weight: bold;
+}
+
+summary::marker {
+  content: "► "; /* Ajouter une flèche avant chaque question */
+}
+
+details[open] summary::marker {
+  content: "▼ "; /* Modifier la flèche lorsque l'accordéon est ouvert */
+}
+
+p {
+  margin-top: 5px;
+  padding-left: 20px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+details[open] p {
+  opacity: 1;
+}
+footer p {
+  display: block;
+}
+
+
+
+
 
 /* version tablette */
 

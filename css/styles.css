@@ -14,6 +14,9 @@
   --lightgrey-color: #f9f9f9;
   --blue-color: #70b2dd;
 }
+img{
+  border-radius: 10px;
+}
 
 /* Suppression des marges et des paddings par défaut du body */
 body {
@@ -56,6 +59,7 @@ header > div {
   font-size: 24px;
   text-decoration: none;
 }
+
 
 /* Masquer la liste du menu par défaut */
 .menu ul {
@@ -248,13 +252,21 @@ footer .copyright {
     padding: 20px;
     color: var(--white-color);
   }
+  
 }
-
+/*  */
 /* Version desktop */
 @media (min-width: 1024px) {
   /* Masquer le menu burger */
   .burger {
     display: none;
+  }
+  .g{
+    position: relative;
+  }
+  .logo{
+    position: absolute;
+    left: 75px;
   }
 
   /* Positionnement du menu */
@@ -265,7 +277,30 @@ footer .copyright {
     left: 400px;
     top: 25px;
   }
-
+  .recherche {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .recherche input {
+    flex: 3;
+    padding: 12px;
+    font-size: 16px;
+  }
+  
+  .recherche button {
+    flex: 1; 
+    padding: 13px;
+    border-radius: 3px;
+    background-color: var(--primary-color);
+    color: white;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+  }
+  
   /* Réorganisation des sections */
   #one {
     display: grid;
@@ -275,6 +310,7 @@ footer .copyright {
   #two {
     display: grid;
     grid-template-columns: 4fr 4fr 4fr;
+    gap: 10px;
   }
 
   /* Affichage du footer complet */
@@ -283,7 +319,7 @@ footer .copyright {
     margin-left: 20px;
   }
 
-  footer {
+  footer{
     display: flex;
     justify-content: space-between;
     gap: 500px;

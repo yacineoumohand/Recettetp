@@ -7,16 +7,17 @@
   <title>tp Recette</title>
   <link rel="stylesheet" href="css/normelize.css">
   <link rel="stylesheet" href="css/styles.css">
+  <script src="js/scripts.js" defer></script>
 </head>
 
 <body>
   <header>
     <div>
       <a class="g" href="">G</a>
-      <a class="logo" href="logo">GourmeTech</a>
+      <a class="logo" href="index.html">GourmeTech</a>
       <nav class="nav">
         <button>
-          <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-moon-fill"
+          <svg class="lune" xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-moon-fill"
             viewBox="0 0 16 16">
             <path
               d="M6 .278a.77.77 0 0 1 .08.858 7.2 7.2 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277q.792-.001 1.533-.16a.79.79 0 0 1 .81.316.73.73 0 0 1-.031.893A8.35 8.35 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.75.75 0 0 1 6 .278" />
@@ -39,11 +40,11 @@
     </nav>
   </header>
   <main>
+    <article class="recherche">
+      <input type="text" placeholder="Rechercher une recette">
+      <button>Rechercher</button>
+    </article>
     <section id="one">
-      <article class="recherche">
-        <input type="text" placeholder="Rechercher une recette">
-        <button>Rechercher</button>
-      </article>
       <article class="categorie">
         <h2>catégorie</h2>
         <label>
@@ -93,7 +94,7 @@
     <section id="two">
       <figure class="tajin">
         <img src="assets/images/tajin_resized.jpg" alt="tajin poulet">
-        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-heart-fill"
+        <svg class="coeur" xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-heart-fill"
           viewBox="0 0 16 16">
           <path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314" />
         </svg>
@@ -104,12 +105,12 @@
             <p>60min</p>
             <p>moyen</p>
           </div>
-          <button><a href="">Voir la recette</a></button>
+          <button><a href="recette.html">Voir la recette</a></button>
         </figcaption>
       </figure>
       <figure class="couscous">
         <img src="assets/images/couscous_resized.jpg" alt="couscous oriental">
-        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-heart-fill"
+        <svg class="coeur" xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-heart-fill"
           viewBox="0 0 16 16">
           <path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314" />
         </svg>
@@ -120,23 +121,23 @@
             <p>2h</p>
             <p>Difficile</p>
           </div>
-          <button><a href="">Voir la recette</a></button>
+          <button><a href="recette.html">Voir la recette</a></button>
         </figcaption>
       </figure>
       <figure class="burgers">
         <img src="assets/images/burger_resized.jpg" alt="burger smash">
-        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="red" class="bi bi-heart-fill"
+        <svg class="coeur" xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="red" class="bi bi-heart-fill"
           viewBox="0 0 16 16">
           <path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314" />
         </svg>
         <figcaption>
           <h2>burger</h2>
           <div class="info">
-            <p>sandwich</p>
+            <p>plat</p>
             <p>30min</p>
             <p>Facile</p>
           </div>
-          <button><a href="">Voir la recette</a></button>
+          <button><a href="recette.html">Voir la recette</a></button>
         </figcaption>
       </figure>
     </section>

@@ -21,6 +21,18 @@ body {
   padding: 0;
 }
 
+/* Par défaut, l'icône cœur est vide */
+.fav-btn {
+  color: black;
+  cursor: pointer;
+}
+
+/* Lorsque l'icône cœur est sélectionnée (ajoutée aux favoris), elle devient rouge */
+.fav-btn.favorited {
+  color: red;
+}
+
+
 /* Conteneur principal du header */
 header > div {
   display: flex;
@@ -199,6 +211,8 @@ footer p {
     position: absolute;
     right: 70px;
   }
+
+  
   
   .burger {
     position: absolute;
